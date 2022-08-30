@@ -1,9 +1,19 @@
 .header{
-    height: 60;
+    height: 80;
     display: flex;
     align-items: center;
     background-color: aqua;
     position: sticky;
     top: 0;
     z-index: 100;
+}
+
+.website-name{
+    position: relative;
+    left: 1cm;
+}
+.search-bar{
+    position: relative;
+    left: 2cm;
+    top: 0.1cm;
 }

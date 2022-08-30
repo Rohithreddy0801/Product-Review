@@ -1,6 +1,6 @@
 import React from 'react'
 import './Header.css'
-import { Button, Form} from 'react-bootstrap';
+import { Button, Form, Row,Col, InputGroup} from 'react-bootstrap';
 function Header() {
   return (
     <div className='header'>
@@ -9,13 +9,23 @@ function Header() {
             <span>Review</span>
         </div>
         <div className="search-bar">
-            <Form.Group controlId="search" style={{marginBottom:"10px"}}>
-                <Form.Control placeholder='search product...' type="text" name="search"/>
-                <Button/>
-            </Form.Group>
+            <Form>
+                <Row className="align-items-center">
+                    <Col xs="auto">
+                        <InputGroup className="mb-2">
+                        <Form.Control id="inlineFormInputGroup" placeholder="search product..." style={{'width':'10cm'}}/>
+                        <Button>Q</Button>
+                        </InputGroup>
+                    </Col>
+                    <Col>
+                        
+                    </Col>
+
+                </Row>
+            </Form>
         </div>
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;
