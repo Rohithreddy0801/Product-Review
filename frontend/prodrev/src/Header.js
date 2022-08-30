@@ -10,16 +10,18 @@ function Header() {
         </div>
         <div className="search-bar">
             <Form>
-                <Row className="align-items-center">
+                <Row>
                     <Col xs="auto">
                         <InputGroup className="mb-2">
-                        <Form.Control id="inlineFormInputGroup" placeholder="search product..." style={{'width':'10cm'}}/>
-                        <Button>Q</Button>
+                        <Form.Control id="inlineFormInputGroup" placeholder="search product..."/>
+                        <Button variant='light'>Search</Button>
                         </InputGroup>
                     </Col>
-                    <Col>
-                        
-                    </Col>
+                    <div className="sign-up-in">
+                        <Button variant='primary'>Log in</Button>
+                        <span className='or'>or</span>
+                        <Button variant='success'>Create a new account</Button>
+                    </div>
 
                 </Row>
             </Form>

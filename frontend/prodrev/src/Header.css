@@ -16,4 +16,21 @@
     position: relative;
     left: 2cm;
     top: 0.1cm;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.sign-up-in{
+    position: relative;
+    left: auto;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin: 10px;
+}
+
+.or{
+    position: relative;
+    margin: 0 4px;
 }

@@ -1,0 +1,22 @@
+.products{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin: 20px 200px;
+
+}
+
+.product{
+    background: #ecf2f7 ;
+    margin: auto auto; 
+    float:left; 
+    margin-top: 20px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    width: 200%;
+    flex: 1;
+}
+.product-list{
+    list-style-type: none;
+}
