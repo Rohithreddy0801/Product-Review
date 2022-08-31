@@ -1,4 +1,5 @@
 .products{
+    background-color: beige;
     display: flex;
     align-items: center;
     margin: 0;

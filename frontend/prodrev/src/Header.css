@@ -2,10 +2,14 @@
     height: 80;
     display: flex;
     align-items: center;
-    background-color: aqua;
+    background-color:rgb(62, 65, 54);
     position: sticky;
     top: 0;
     z-index: 100;
+}
+
+.header p{
+    margin: 0 40px;
 }
 
 .website-name{
@@ -14,23 +18,13 @@
 }
 .search-bar{
     position: relative;
-    left: 2cm;
-    top: 0.1cm;
+    left: 20px;
     display: flex;
     align-items: center;
-    flex: 1;
 }
 
 .sign-up-in{
-    position: relative;
-    left: auto;
     display: flex;
-    align-items: center;
-    flex: 1;
+    align-self: flex-start;
     margin: 10px;
-}
-
-.or{
-    position: relative;
-    margin: 0 4px;
 }
