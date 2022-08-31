@@ -1,12 +1,15 @@
 import React from 'react'
 import './Header.css'
 import { Button, Form, Row,Col, InputGroup} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 function Header() {
   return (
     <div className='header'>
         <div className="website-name">
-            <span>Product </span>
-            <span>Review</span>
+            <Link to="/">
+                <span>Product </span>
+                <span>Review</span>
+            </Link>
         </div>
         <div className="search-bar">
             <Form>
@@ -18,9 +21,13 @@ function Header() {
                         </InputGroup>
                     </Col>
                     <div className="sign-up-in">
-                        <Button variant='primary'>Log in</Button>
+                        <Link to='/login'>
+                            <Button variant='primary'>Log in</Button>
+                        </Link>
                         <span className='or'>or</span>
-                        <Button variant='success'>Create a new account</Button>
+                        <Link to='/signup'>
+                            <Button variant='success'>Create a new account</Button>
+                        </Link>
                     </div>
 
                 </Row>

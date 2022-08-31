@@ -1,0 +1,38 @@
+.login{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.login-card{
+    
+    display:flex;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    width: 300px;
+    height: fit-content;
+    padding: 30px 20px;
+}
+
+.home{
+    margin-right: 140px;
+    margin-bottom: 20px;
+    width: 120px;
+}
+
+.login h1{
+    margin-bottom: 20px;
+}
+.textbox{
+    margin-bottom : 20px;
+}
+
+.login-button{
+    width: 80px;
+}
+
+.login-existing-button{
+    width: 150px;
+}
