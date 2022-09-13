@@ -2,7 +2,6 @@
     background-color: beige;
     display: flex;
     align-items: center;
-    margin: 0;
     margin: 20px 200px;
 
 }
@@ -12,10 +11,9 @@
     margin: auto auto; 
     float:left; 
     margin-top: 20px;
-    padding: 50px;
+    padding: 20px;
     display: flex;
     align-items: center;
-    width: 200%;
     flex: 1;
 }
 .product-list{

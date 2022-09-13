@@ -1,0 +1,10 @@
+.product{
+    display:flex;
+    padding: 0;
+    width: 70%;
+    height: auto;
+}
+.product-dp{
+    max-width: 30%;
+    height: auto;
+}

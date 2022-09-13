@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
-import Header from './Header';
-import Homepage from './Homepage';
-import Login from './Login';
-import SignUp from './SignUp';
+import Header from './components/Header';
+import Homepage from './components/Homepage';
+import Login from './components/Login';
+import SignUp from './components/SignUp';
+import ProductInfo from './components/ProductInfo';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Route path='/' element={[<Header/>,<Homepage/>]}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/signup' element={<SignUp/>}/>
+          <Route path='/productinfo' element={[<Header/>,<ProductInfo/>]}/>
         </Routes>
       </div>
     </Router>
