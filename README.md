@@ -1,1 +1,2 @@
 # Product-Review
+The extent of online shopping has been spreading rapidly over time. The consumers need to consider the characteristics, quality, past user’s experience with the product and other information of the product when purchasing on the internet. This improves customer satisfaction of shopping. One of the sources of product feature information is online product review that can be valued by online customers.The Online product review would be much trustworthy if that comes from other common people who actually used that product. 
