@@ -1,4 +1,5 @@
 import React from 'react'
+import {useLocation} from 'react-router-dom';
 import Product from './Product'
 import '../Homepage.css'
 
@@ -33,15 +34,21 @@ function Homepage() {
     image:"https://assets.reedpopcdn.com/ps5-pre-order-header.jpg/BROK/thumbnail/1600x900/quality/100/ps5-pre-order-header.jpg",
     itemId:"06"
   };
+
+  const location = useLocation();
+  var user = location.state;
+  if(location.state!=null){
+    user = user.user
+  }
   return (
     <div className='products'>
         <ul className='product-list'>
-            <li><Product props={item1}/></li>
-            <li><Product props={item2}/></li>
-            <li><Product props={item3}/></li>
-            <li><Product props={item4}/></li>
-            <li><Product props={item5}/></li>
-            <li><Product props={item6}/></li>
+            <li><Product props={{"item":item1,"user":user}}/></li>
+            <li><Product props={{"item":item2,"user":user}}/></li>
+            <li><Product props={{"item":item3,"user":user}}/></li>
+            <li><Product props={{"item":item4,"user":user}}/></li>
+            <li><Product props={{"item":item5,"user":user}}/></li>
+            <li><Product props={{"item":item6,"user":user}}/></li>
         </ul>
     </div>
   )

@@ -41,6 +41,26 @@
     color: black;
 }
 
+.login-button{
+    height: 40px;
+    width: 80px;
+    margin-left:20px;
+    background-color: green;
+    color: #e0eef7;
+    border: 2px solid #4CAF50; 
+    border-radius: 8px;
+}
+
+.signup-button{
+    height: 40px;
+    width: 200px;
+    margin-left:20px;
+    background-color: rgb(41, 28, 193);
+    color: #e0eef7;
+    border: 2px solid #1f0589; 
+    border-radius: 8px;
+}
+
 .logout-button{
     height: 40px;
     width: 80px;

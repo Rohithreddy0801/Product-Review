@@ -6,11 +6,12 @@ import {useNavigate} from 'react-router-dom';
 function Product(props) {
   const navigate = useNavigate();
   const [clicked,setClicked] = useState(false);
-  const prod = props.props;
+  const prod = props.props.item;
   
 
   return (
     <div>
+      {console.log(props)}
       {!clicked &&
         <Card className='product'> 
           <p>Product Name : {prod.name}</p>
@@ -21,7 +22,7 @@ function Product(props) {
       }
       {
         clicked &&
-        navigate("/productinfo",{stateProd:prod})
+        navigate("/productinfo",{state:{"user":props.props.user,"product":prod}})
       }
     </div>
   )

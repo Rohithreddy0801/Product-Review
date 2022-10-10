@@ -59,7 +59,7 @@ function Login() {
           </>
         }
         {
-          access && navigate('/',{state:details})
+          access && navigate('/',{state:{"user":details}})
         }
     </div>
   )

@@ -5,9 +5,6 @@ function AddNewReview() {
     //const location = useLocation();
     //const user = location.state;
     const [review,setReview] = useState({
-        "product_name":"",
-
-        
     })
     const handleChange = (event) => {
         const name = event.target.name;
@@ -22,19 +19,16 @@ function AddNewReview() {
     return (
         <div className='review-form'>
             <form onSubmit={handleSubmit}>
+                <h1>Add a new review</h1>
                 <div className='row'>
-                    <label>Product Name:
-                        <input type='text' id='product-name' name='product_name' value={review.product_name} onChange={handleChange}/>
-                    </label>
+                    <input type='text' id='product-name' name='product_name' placeholder='Product Name...' value={review.product_name} onChange={handleChange}/>
                 </div>
 
                 <div className='row'>
-                    <label>Price:
-                        <input type="number" id='price' name='price' value={review.price} onChange={handleChange}/>
-                    </label>
+                    <input type="number" id='price' name='price' placeholder='Price...' value={review.price} onChange={handleChange}/>
                 </div>
 
-                <div className='row'>
+                <div className='row-dropdown'>
                     <label>Rating: 
                         <select id="rating" name="rating" value={review.rating} onChange={handleChange}>
                             <option value="1">1</option>
@@ -46,7 +40,7 @@ function AddNewReview() {
                     </label>
                 </div>
 
-                <div className='row'>
+                <div className='row-dropdown'>
                         <label>Quality: 
                             <select id="quality" name="quality" value={review.quality} onChange={handleChange}>
                                 <option value="1">1</option>
@@ -58,7 +52,7 @@ function AddNewReview() {
                         </label>
                 </div>
 
-                <div className='row'>
+                <div className='row-dropdown'>
                         <label htmlFor="worth">Value for money:
                         <select id="worth" name="worth" value={review.worth} onChange={handleChange}>
                             <option value="1">1</option>
@@ -71,12 +65,10 @@ function AddNewReview() {
                 </div>
 
                 <div className='row'>
-                        <label>Description: 
-                            <textarea type="text" name="desc" id="desc"  value={review.desc} onChange={handleChange} style={{height:"200px"}}/>
-                        </label>
+                    <textarea type="text" name="desc" id="desc" placeholder='Description...' value={review.desc} onChange={handleChange} style={{height:"200px"}}/>
                 </div>
 
-                <input type='submit'/>
+                <button className='submit-button' type='submit'>Submit</button>
 
             </form>
         </div>

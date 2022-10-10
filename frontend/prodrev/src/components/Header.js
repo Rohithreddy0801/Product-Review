@@ -8,15 +8,16 @@ function Header() {
   const navigate = useNavigate();
   const [logged,setLogged] = useState(false)
   const user = location.state;
+  
 
   const goToHomeHandler = e =>{
     e.preventDefault();
-    navigate('/',{state:user})
+    navigate('/',{state:{"user":user.user}})
   }
 
   const addReviewHandler = e =>{
     e.preventDefault();
-    navigate('/addreview',{state:user})
+    navigate('/addreview',{state:{"user":user.user}})
   }
 
   const logoutHandler = e =>{
@@ -27,7 +28,7 @@ function Header() {
   }
 
   useEffect(()=>{
-    if(location.state!==null){
+    if(location.state!==null && user.user!==null){
       setLogged(true);
     }
   })
@@ -42,17 +43,17 @@ function Header() {
         {!logged &&
           <div className="sign-up-in">
             <Link to='/login'>
-              <button variant='primary'>Log in</button>
+              <button className='login-button'>Log in</button>
             </Link>
             <Link to='/signup'>
-              <button variant='success' style={{'marginLeft':'20px'}}>Create a new account</button>
+              <button className='signup-button'>Create a new account</button>
             </Link>
           </div>
           }
         </div>
-        {location.state!==null &&
+        {location.state!==null && user.user!=null &&
         <>
-            <p className='welcome-user'>Welcome, {location.state.name}</p>
+            <p className='welcome-user'>Welcome, {user.user.name} </p>
           <div className='header-right'>
             <button className='add-review-button' onClick={addReviewHandler}>Add Review</button>
             <button className='logout-button' onClick={logoutHandler}>Logout</button>

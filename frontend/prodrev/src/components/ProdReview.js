@@ -5,7 +5,7 @@ function ProdReview(prop) {
     const rev = prop.rev;
     return (
     <div>
-        {console.log(rev)}
+        {console.log(prop)}
         <Card className="review"> 
           <p>Reviewer: {rev.reviewer}</p>
           <p>Descriptin: {rev.desc}</p>

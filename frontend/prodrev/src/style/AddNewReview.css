@@ -1,19 +1,44 @@
 .review-form{
     margin: 2% 10%;
-    padding: 4% 10%;
-
+    padding: 2% 10%;
+    background-color: rgb(169, 206, 231);
+    border: 2px solid rgb(87, 173, 231); 
+    border-radius: 8px;
 }
 
-input{
-    margin-left: 5px;
-}
-
-.row{
+h1{
     margin-bottom: 20px;
 }
+
+.row-dropdown{
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.submit-button{
+    margin-top: 20px;
+    width: 80px;
+    height: 40px;
+    background-color: rgb(228, 234, 150);
+    border: 2px solid rgb(230, 209, 150); 
+    border-radius: 8px;
+}
+
+.review-form input, textarea{
+    display: block;
+    width: 100%;
+    padding: .5rem .8rem .5rem .8rem;
+    margin: .9vw 0 ;
+    border:0;
+    border-radius: 5px;
+    font-size: 15px;}
 
 .row:after{
     content: "";
     display: table;
     clear: both;
 }
+

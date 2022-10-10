@@ -2,6 +2,7 @@ import React from 'react'
 //import {useLocation} from 'react-router-dom';
 import ProdReview from './ProdReview';
 import '../Homepage.css'
+import { useLocation } from 'react-router-dom';
 function ProductInfo() {
     //const location = useLocation();
     //const review = location.stateProd;
@@ -23,12 +24,14 @@ function ProductInfo() {
         rating:1,
         seller:"www.asus.com"
       };
+
+    const location = useLocation();
     return (
     <div>
         <ul style={{listStyleType:"None"}}>
-            <li><ProdReview rev={reviews1}/></li>
-            <li><ProdReview rev={reviews2}/></li>
-            <li><ProdReview rev={reviews3}/></li>
+            <li><ProdReview user={location.state.user} rev={reviews1}/></li>
+            <li><ProdReview user={location.state.user} rev={reviews2}/></li>
+            <li><ProdReview user={location.state.user} rev={reviews3}/></li>
         </ul>
     </div>
     )
