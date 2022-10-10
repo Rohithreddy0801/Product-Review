@@ -6,6 +6,7 @@ import Login from './components/Login';
 import SignUp from './components/SignUp';
 import ProductInfo from './components/ProductInfo';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import AddNewReview from './components/AddNewReview';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/login' element={<Login/>}/>
           <Route path='/signup' element={<SignUp/>}/>
           <Route path='/productinfo' element={[<Header/>,<ProductInfo/>]}/>
+          <Route path='/addreview' element={[<Header/>,<AddNewReview/>]}/>
         </Routes>
       </div>
     </Router>

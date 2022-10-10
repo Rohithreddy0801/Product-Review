@@ -1,0 +1,19 @@
+.review-form{
+    margin: 2% 10%;
+    padding: 4% 10%;
+
+}
+
+input{
+    margin-left: 5px;
+}
+
+.row{
+    margin-bottom: 20px;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
