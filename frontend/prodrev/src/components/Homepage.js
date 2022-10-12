@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useState,useEffect } from 'react'
 import {useLocation} from 'react-router-dom';
 import Product from './Product'
 import '../Homepage.css'
 
 function Homepage() {
-  const item1 = {
+  /*const item1 = {
     name:"Asus Rog 6",
     image:"https://fdn.gsmarena.com/imgroot/news/20/05/asus-phones-in-july/-727w2/gsmarena_000.jpg",
     itemId:"01"
@@ -33,22 +33,44 @@ function Homepage() {
     name:"PlayStation 5",
     image:"https://assets.reedpopcdn.com/ps5-pre-order-header.jpg/BROK/thumbnail/1600x900/quality/100/ps5-pre-order-header.jpg",
     itemId:"06"
-  };
+  };*/
 
   const location = useLocation();
   var user = location.state;
   if(location.state!=null){
     user = user.user
   }
+
+  const [reviews,setReviews] = useState([]); 
+    const req = {
+        method:"GET",
+        headers:{
+            'Content-Type': 'application/json'
+        }
+    };
+
+    useEffect(()=>{
+        fetch("http://localhost:9009/review/see-review",req)
+        .then(response=>response.json())
+        .then(data=>{
+          setReviews(data);
+          //console.log(reviews)
+            });
+    });
   return (
     <div className='products'>
         <ul className='product-list'>
+        {reviews.map(rev => (
+              <li key={rev.id}><Product props={{"item":rev,"user":user}}/></li>
+            ))}
+            {/*
             <li><Product props={{"item":item1,"user":user}}/></li>
             <li><Product props={{"item":item2,"user":user}}/></li>
             <li><Product props={{"item":item3,"user":user}}/></li>
             <li><Product props={{"item":item4,"user":user}}/></li>
             <li><Product props={{"item":item5,"user":user}}/></li>
-            <li><Product props={{"item":item6,"user":user}}/></li>
+            <li><Product props={{"item":item6,"user":user}}/></li> */}
+            
         </ul>
     </div>
   )

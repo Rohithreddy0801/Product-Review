@@ -11,11 +11,10 @@ function Product(props) {
 
   return (
     <div>
-      {console.log(props)}
       {!clicked &&
         <Card className='product'> 
-          <p>Product Name : {prod.name}</p>
-          <img className='product-dp' src={prod.image} alt="img"/>
+          <p>Product Name : {prod.product_name}</p>
+          <img className='product-dp' src={prod.image} alt={prod.product_name+": No image available"}/>
           <br/>
           <Button onClick={e=>setClicked(true)}>Click to view/add reviews</Button>
         </Card>

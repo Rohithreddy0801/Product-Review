@@ -18,3 +18,14 @@
 .product-list{
     list-style-type: none;
 }
+
+.add-button{
+    height: 40px;
+    width: 200px;
+    margin-left:20px;
+    margin-top: 20px;
+    background-color: rgb(41, 28, 193);
+    color: #e0eef7;
+    border: 2px solid #1f0589; 
+    border-radius: 8px;
+}

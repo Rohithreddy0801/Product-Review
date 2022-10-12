@@ -7,10 +7,13 @@ function ProdReview(prop) {
     <div>
         {console.log(prop)}
         <Card className="review"> 
-          <p>Reviewer: {rev.reviewer}</p>
-          <p>Descriptin: {rev.desc}</p>
+          <p>Reviewer: {rev.username}</p>
+          <p>Product: {rev.product_name}</p>
+          <img src={rev.image} alt={"s"}/>
+          <p>Description: {rev.desc}</p>
           <p>Rating: {rev.rating}</p>
-          <p>Seller: {rev.seller}</p>
+          <p>Value for money: {rev.value}</p>
+          <p>Quality: {rev.quality}</p>
         </Card>
     </div>
   )
