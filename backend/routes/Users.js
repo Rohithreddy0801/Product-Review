@@ -5,10 +5,10 @@ const { Users } = require('../models')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken');
 
-router.get("/", async (req,res)=>{
+router.get("/",   async (req,res)=>{
     const listOfUsers = await Users.findAll();
     res.json(listOfUsers);
-});
+    });
 
 router.post("/new-user", async (req,res)=> {
 
@@ -34,7 +34,7 @@ router.post("/new-user", async (req,res)=> {
     }catch(err){
         res.status(400).json({"message":err});
     }
-})
+    })
 
 router.post("/login", async (req,res)=> {
 
@@ -64,6 +64,6 @@ router.post("/login", async (req,res)=> {
         "username" : user.username,
         "email" : user.emailid
      });
-})
+    })
 
 module.exports = router
